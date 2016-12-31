@@ -1,6 +1,6 @@
 # dash
 Amazon dash button hack
-An Amazon dash button hack
+An Amazon dash button hack with some lua hacking small router
 
 The Dash button from Amazon is an interesting IoT concept; sell the consumer an inexpensive ($5) branded button to order consumables directly from Amazon; detergent, diapers, plastic bags and the like. The ultimate end game is for the auto consumable ordering feature, sans button, to be builtin into appliances and the appliances order the consumables for the consumer when needed. For me, it’s an amazingly inexpensive wifi button in a nice key chain enclosure. I purchase a couple "Glad" bag buttons, not because I want to order plastic bags, but I want to experiment with the button and I like the Glad logo. I am glad to be using a button that connects to a wifi router as a trigger. The first task is to capture the button before it sends the request to Amazon. I am not the only one that’s experimented with the idea, see here; https://medium.com/@edwardbenson/how-i-hacked-amazon-s-5-wifi-button-to-track-baby-data-794214b0bdd8#.kbscrwkhz
 
