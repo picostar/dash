@@ -1,6 +1,6 @@
 #!/usr/bin/lua       
 
---    body,c,l,h = http.request('http://maker.ifttt.com/trigger/DASHit/with/key/i2dBLihus44EqrVRBLRk3')                                                      
+--    body,c,l,h = http.request('http://maker.ifttt.com/trigger/DASHit/with/key/yourkeyhere')                                                      
                                                                                 
 function get_packet(line)                                                       
                                                                                                                          
@@ -56,7 +56,7 @@ function main_loop()
 	    		                                                  			
 
 	--				print('button pushed  '..DASHmac)
-		--    		body,c,l,h = http.request('http://maker.ifttt.com/trigger/DASHit/with/key/i2dBLihus44EqrVRBLRk3')
+		--    		body,c,l,h = http.request('http://maker.ifttt.com/trigger/DASHit/with/key/yourkeyhere')
 		--    		print(body,c,l,h)
                                                                                                    
         end                                                                     
