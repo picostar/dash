@@ -34,8 +34,8 @@ function main_loop()
                                                                                                                                                                                                              
 --      lets see what's asking for a connection                                                                                                                                                              
 --      f = io.popen("tcpdump -enU -s 128 -i mon0 type mgt subtype probe-req")                                                                                                                               
-        f = io.popen("grep -q mon0 /proc/net/dev || /usr/sbin/iw phy phy0 interface add mon0 type monitor /sbin/ifconfig mon0 up; /usr/sbin/tcpdump -enU -s 128 -i mon0 -y IEEE802_11_RADIO type mgt subtype 
-                                                                                                                                                                                                             
+        f = io.popen("grep -q mon0 /proc/net/dev || /usr/sbin/iw phy phy0 interface add mon0 type monitor /sbin/ifconfig mon0 up; /usr/sbin/tcpdump -enlU -s 128 -i mon0 -y IEEE802_11_RADIO type mgt subtype probe-req")
+                                                                                                                                                                                                           
         print ('hello')                                                                                                                                                                                      
                                                                                                                                                                                                              
         while true do                                       -- big loop, waiting for packets                                                                                                                 
@@ -47,7 +47,9 @@ function main_loop()
 --                         print(k, v)                                                                                                                                                                       
 --                      end                                                                                                                                                                                  
                                                                                                                                                                                                              
-                        newmac=words[15]                        -- station/device MAC                                                                                                                        
+--                        newmac=words[15]                        -- station/device MAC   
+                        newmac=words[13]                        -- station/device MAC   
+    
                         now = socket.gettime()                                                                                                                                                               
                                                                                                                                                                                                              
                         if newmac == oldmac then                                                                                                                                                             
