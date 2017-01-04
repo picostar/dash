@@ -1,7 +1,7 @@
 #!/usr/bin/lua      
 
 --  original dashit assumed that button is partially set up with amazon, dashit2 works with fresh dash button (old version, 
--- not tested on new version), pressing and holding button starts the wifi connection process with a "probe-request" to any avail 
+-- not tested on new version), without setup. pressing and holding button starts the wifi connection process with a "probe-request" to any avail 
 -- access points/routers.  doing deeper packet inspection to see if it's a broadcom vendor oui (0x40).  This is not fail safe
 -- as another broadcom based probe-request could occur. next version would have training mode, press two times to train/save button MAC
 -- address
