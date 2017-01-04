@@ -58,22 +58,25 @@ function main_loop()
                                                                                                                                                                                                                                                             
 --                      newmac=words[15]                -- station/device MAC                                                                                                                                                                               
                         newmac=words[13]                -- find the station/device MAC                                                                                                                                                                      
-                                                                                                                                                                                                                                                            
-                        now = socket.gettime()                                                                                                                                                                                                              
-                                                                                                                                                                                                                                                            
-                        if delta > delay then oldmac='old' end  --timeout to reset                                                                                                                                                                          
-                                                                                                                                                                                                                                                            
-                        if newmac == oldmac then                                                                                                                                                                                                            
-                                print(count,'   ',now,'  ',delta,' repeat MAC adddress is =  '..newmac)                                                                                                                                                     
-                                count = count + 1                                                                                                                                                                                                           
-                                delta=now-last                                                                                                                                                                                                              
-                        else                                                                                                                                                                                                                                
-                               print(count,'   ',now,'  ','        MAC adddress is =  '..newmac)                                                                                                                                                            
-                                count = 0                                                                                                                                                                                                                   
-                                last=now                                                                                                                                                                                                                    
-                                delta=0                                                                                                                                                                                                                     
-                                oldmac = newmac                                                                                                                                                                                                             
-                        end                                                                                                                                                                                                                                 
+                        now = socket.gettime()                                        
+                        delta=now-last  
+    
+                        if delta > delay then oldmac='old' end  --timeout to reset
+                                                                                      
+                        if newmac == oldmac then                                                
+                                print(count,'   ',now,'  ',delta,' repeat MAC adddress is =  '..newmac)         
+                                count = count + 1                                                      
+                        else                                                                           
+                                count = 0
+                               print(count,'   ',now,'  ','        MAC adddress is =  '..newmac)                
+                                last=now                                                        
+                                delta=0                                                         
+                                oldmac = newmac                                                 
+                        end    
+    
+    
+    
+    
         end                                                                                                                                                                                                                                                 
         io.close(f)                                                                                                                                                                                                                                         
 end                                                                                                                                                                                                                                                         
