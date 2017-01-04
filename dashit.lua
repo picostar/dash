@@ -35,11 +35,12 @@ function main_loop()
                                                                                 
         DASHmac = 'empty'
         now = socket.gettime()
-        delta = now
+--        delta = now
         print ('hello')
                                                                      
         while true do                                       -- big loop, waiting for arp packets
-                                                                                
+		
+            now = socket.gettime()                                                                    
             packet = get_packet(f:read("*l"))           --  
 --			print(packet, '\n')
 
@@ -49,9 +50,7 @@ function main_loop()
 
 	    		if words[13]=='BOOTP/DHCP' and words[11]=='localhost.bootpc' then
 	    			DASHmac = words[2]
-	    			print(now, '  ', delta, ' DASH MAC adddress is =  '..DASHmac)
-					delta = socket.gettime()-delta
-					now = socket.gettime()
+	    			print(now, ' DASH MAC adddress is =  '..DASHmac)
 	    		end
 	    		                                                  			
 
