@@ -3,7 +3,10 @@
 -- report any device that makes a prob-request
                                                                                                                                                                                                              
 --    put the router in monitor mode    iw phy phy0 interface add mon0 type monitor                                                                                                                          
---    then enable the interface         ifconfig mon0 up                                                                                                                                                     
+--    then enable the interface         ifconfig mon0 up   d
+
+-- opkg install luasocket
+-- opkg install tcpdump
                                                                                                                                                                                                              
 function get_packet(line)                                                                                                                                                                                    
                                                                                                                                                                                                              
