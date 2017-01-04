@@ -1,4 +1,4 @@
-# dash hack withopenwrt wifi router
+# dash hack with openwrt wifi router
 Amazon dash button hack
 An Amazon dash button hack with some lua hacking small router
 
