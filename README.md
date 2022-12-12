@@ -37,10 +37,13 @@ BusyBox v1.23.2 (2015-11-06 10:55:02 HKT) built-in shell (ash)
   * 1 1/2 oz Orange Juice
   * 1 tsp. Grenadine Syrup
  -----------------------------------------------------`
+ 
 root@wackamole:~#
 Let’s test (again) you have access to the outside internet with ping;
 
-root@wackamole:~# ping www.google.com PING www.google.com (172.217.1.68): 56 data bytes 64 bytes from 172.217.1.68: seq=0 ttl=58 time=9.363 ms 64 bytes from 172.217.1.68: seq=1 ttl=58 time=9.756 ms ^C (control C out) --- www.google.com ping statistics --- 2 packets transmitted, 2 packets received, 0% packet loss round-trip min/avg/max = 9.363/9.559/9.756 ms root@wackamole:~#
+root@wackamole:# ping www.google.com PING www.google.com (172.217.1.68): 56 data bytes 64 bytes from 172.217.1.68: seq=0 ttl=58 time=9.363 ms 64 bytes from 172.217.1.68: seq=1 ttl=58 time=9.756 ms ^C (control C out) 
+
+--- www.google.com ping statistics --- 2 packets transmitted, 2 packets received, 0% packet loss round-trip min/avg/max = 9.363/9.559/9.756 ms root@wackamole:~#
 
 Let’s go back to the button. It’s currently associated with your house router, let’s associate it with your new openwrt router. We could go back to setting up the button with the Amazon mobile app as you did above but instead there is another interesting feature of the button we can use in this case. There is a http server built into it and it’s useful when you change your wifi router it connects to. You only need to hold the button down until the led blinks blue, and then in a minute or so (be patient) it will be visible as a wifi access point you connect your computer’s wifi to. The SSID is "Amazon ConfigureMe". Once connected you can look at the IP your served in your network settings, or it should be 192.168.0.1. Enter that IP in your browser and you will be served a very simple web page to select the SSID of your home router and enter the password. Ok…​ Now that you have the button set up to communicate to your wifi router. The button will no longer be an access point and your computer should reconnect to last router connected to, but check, reconnect your computer to the openwrt router.
 
